@@ -1,7 +1,25 @@
 // Main JavaScript for Photography Site
 
 $(document).ready(function() {
-    // Initialize Slick Slider for photo gallery
+    // Initialize Hero Slider (full width)
+    if ($('.hero-slider').length) {
+        $('.hero-slider').slick({
+            dots: true,
+            infinite: true,
+            speed: 800,
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            autoplay: true,
+            autoplaySpeed: 5000,
+            fade: true,
+            cssEase: 'linear',
+            arrows: true,
+            prevArrow: '<button type="button" class="slick-prev"><i class="fas fa-chevron-left"></i></button>',
+            nextArrow: '<button type="button" class="slick-next"><i class="fas fa-chevron-right"></i></button>'
+        });
+    }
+    
+    // Initialize Slick Slider for photo gallery (if exists)
     if ($('.photo-gallery').length) {
         $('.photo-gallery').slick({
             dots: true,
