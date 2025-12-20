@@ -60,38 +60,75 @@ body {
 }
 
 .photo-gallery {
+    margin: 40px 0;
+    
     .slick-slide {
         padding: 10px;
+        outline: none;
         
-        img {
-            width: 100%;
-            height: auto;
+        .slide-content {
+            position: relative;
+            overflow: hidden;
             border-radius: 8px;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
             transition: transform 0.3s ease;
             
             &:hover {
-                transform: scale(1.05);
+                transform: scale(1.02);
+                box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
             }
+        }
+        
+        img {
+            width: 100%;
+            height: auto;
+            display: block;
+            border-radius: 8px;
         }
     }
     
     .slick-prev,
     .slick-next {
-        z-index: 1;
+        z-index: 2;
+        width: 50px;
+        height: 50px;
         
         &:before {
             color: $primary-color;
             font-size: 30px;
+            opacity: 0.8;
         }
+        
+        &:hover:before {
+            opacity: 1;
+        }
+    }
+    
+    .slick-prev {
+        left: -60px;
+    }
+    
+    .slick-next {
+        right: -60px;
     }
     
     .slick-dots {
         bottom: -50px;
+        position: relative;
+        margin-top: 30px;
         
-        li button:before {
-            color: $primary-color;
-            font-size: 12px;
+        li {
+            margin: 0 5px;
+            
+            button:before {
+                color: $primary-color;
+                font-size: 12px;
+                opacity: 0.5;
+            }
+            
+            &.slick-active button:before {
+                opacity: 1;
+            }
         }
     }
 }
@@ -173,6 +210,26 @@ body {
     
     .photo-grid {
         grid-template-columns: 1fr;
+    }
+    
+    .photo-gallery {
+        .slick-prev {
+            left: -30px;
+        }
+        
+        .slick-next {
+            right: -30px;
+        }
+        
+        .slick-prev,
+        .slick-next {
+            width: 40px;
+            height: 40px;
+            
+            &:before {
+                font-size: 24px;
+            }
+        }
     }
 }
 
