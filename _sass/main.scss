@@ -1,0 +1,178 @@
+---
+---
+
+// Variables
+$primary-color: #2c3e50;
+$secondary-color: #34495e;
+$accent-color: #e74c3c;
+$text-color: #333;
+$light-bg: #f8f9fa;
+
+// Base Styles
+body {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    color: $text-color;
+    line-height: 1.6;
+}
+
+// Header Styles
+.site-header {
+    .navbar-brand {
+        font-size: 1.5rem;
+        font-weight: bold;
+        letter-spacing: 1px;
+    }
+    
+    .navbar-nav .nav-link {
+        font-weight: 500;
+        transition: color 0.3s ease;
+        
+        &:hover {
+            color: $accent-color !important;
+        }
+    }
+}
+
+// Hero Section
+.hero-section {
+    background: linear-gradient(135deg, $primary-color 0%, $secondary-color 100%);
+    color: white;
+    padding: 100px 0;
+    text-align: center;
+    
+    h1 {
+        font-size: 3.5rem;
+        font-weight: 300;
+        margin-bottom: 1rem;
+        letter-spacing: 2px;
+    }
+    
+    p {
+        font-size: 1.25rem;
+        opacity: 0.9;
+    }
+}
+
+// Gallery Styles
+.gallery-section {
+    padding: 80px 0;
+    background-color: $light-bg;
+}
+
+.photo-gallery {
+    .slick-slide {
+        padding: 10px;
+        
+        img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+            
+            &:hover {
+                transform: scale(1.05);
+            }
+        }
+    }
+    
+    .slick-prev,
+    .slick-next {
+        z-index: 1;
+        
+        &:before {
+            color: $primary-color;
+            font-size: 30px;
+        }
+    }
+    
+    .slick-dots {
+        bottom: -50px;
+        
+        li button:before {
+            color: $primary-color;
+            font-size: 12px;
+        }
+    }
+}
+
+// Photo Grid
+.photo-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px 0;
+    
+    .photo-item {
+        position: relative;
+        overflow: hidden;
+        border-radius: 8px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease;
+        
+        &:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15);
+        }
+        
+        img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            display: block;
+        }
+        
+        .photo-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+            color: white;
+            padding: 20px;
+            transform: translateY(100%);
+            transition: transform 0.3s ease;
+        }
+        
+        &:hover .photo-overlay {
+            transform: translateY(0);
+        }
+    }
+}
+
+// Section Styles
+.section {
+    padding: 80px 0;
+    
+    h2 {
+        font-size: 2.5rem;
+        margin-bottom: 2rem;
+        text-align: center;
+        color: $primary-color;
+    }
+}
+
+// Footer Styles
+.site-footer {
+    margin-top: auto;
+}
+
+// Responsive
+@media (max-width: 768px) {
+    .hero-section {
+        padding: 60px 0;
+        
+        h1 {
+            font-size: 2.5rem;
+        }
+        
+        p {
+            font-size: 1rem;
+        }
+    }
+    
+    .photo-grid {
+        grid-template-columns: 1fr;
+    }
+}
+

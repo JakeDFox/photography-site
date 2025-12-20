@@ -1,0 +1,22 @@
+# Site Settings
+title: "BF Photography"
+description: "Professional Photography Portfolio"
+url: "" # the base hostname & protocol for your site
+baseurl: "" # the subpath of your site
+
+# Build Settings
+markdown: kramdown
+theme: null
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+
+# Exclude from processing
+exclude:
+  - README.md
+  - node_modules
+
+# Sass/SCSS Settings
+sass:
+  style: compressed
+
