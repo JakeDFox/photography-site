@@ -1,4 +1,223 @@
----
----
+/* Base Styles */
+body {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    color: #333;
+    line-height: 1.6;
+}
 
-@import "main";
+/* Header Styles */
+.site-header .navbar-brand {
+    font-size: 1.5rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.site-header .navbar-nav .nav-link {
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.site-header .navbar-nav .nav-link:hover {
+    color: #e74c3c !important;
+}
+
+/* Hero Section */
+.hero-section {
+    background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+    color: white;
+    padding: 100px 0;
+    text-align: center;
+}
+
+.hero-section h1 {
+    font-size: 3.5rem;
+    font-weight: 300;
+    margin-bottom: 1rem;
+    letter-spacing: 2px;
+}
+
+.hero-section p {
+    font-size: 1.25rem;
+    opacity: 0.9;
+}
+
+/* Gallery Styles */
+.gallery-section {
+    padding: 80px 0;
+    background-color: #f8f9fa;
+}
+
+.photo-gallery {
+    margin: 40px 0;
+}
+
+.photo-gallery .slick-slide {
+    padding: 10px;
+    outline: none;
+}
+
+.photo-gallery .slick-slide .slide-content {
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.photo-gallery .slick-slide .slide-content:hover {
+    transform: scale(1.02);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.photo-gallery .slick-slide img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 8px;
+}
+
+.photo-gallery .slick-prev,
+.photo-gallery .slick-next {
+    z-index: 2;
+    width: 50px;
+    height: 50px;
+}
+
+.photo-gallery .slick-prev:before,
+.photo-gallery .slick-next:before {
+    color: #2c3e50;
+    font-size: 30px;
+    opacity: 0.8;
+}
+
+.photo-gallery .slick-prev:hover:before,
+.photo-gallery .slick-next:hover:before {
+    opacity: 1;
+}
+
+.photo-gallery .slick-prev {
+    left: -60px;
+}
+
+.photo-gallery .slick-next {
+    right: -60px;
+}
+
+.photo-gallery .slick-dots {
+    bottom: -50px;
+    position: relative;
+    margin-top: 30px;
+}
+
+.photo-gallery .slick-dots li {
+    margin: 0 5px;
+}
+
+.photo-gallery .slick-dots li button:before {
+    color: #2c3e50;
+    font-size: 12px;
+    opacity: 0.5;
+}
+
+.photo-gallery .slick-dots li.slick-active button:before {
+    opacity: 1;
+}
+
+/* Photo Grid */
+.photo-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px 0;
+}
+
+.photo-grid .photo-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.photo-grid .photo-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15);
+}
+
+.photo-grid .photo-item img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    display: block;
+}
+
+.photo-grid .photo-item .photo-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+    color: white;
+    padding: 20px;
+    transform: translateY(100%);
+    transition: transform 0.3s ease;
+}
+
+.photo-grid .photo-item:hover .photo-overlay {
+    transform: translateY(0);
+}
+
+/* Section Styles */
+.section {
+    padding: 80px 0;
+}
+
+.section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    text-align: center;
+    color: #2c3e50;
+}
+
+/* Footer Styles */
+.site-footer {
+    margin-top: auto;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .hero-section {
+        padding: 60px 0;
+    }
+    
+    .hero-section h1 {
+        font-size: 2.5rem;
+    }
+    
+    .hero-section p {
+        font-size: 1rem;
+    }
+    
+    .photo-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .photo-gallery .slick-prev {
+        left: -30px;
+    }
+    
+    .photo-gallery .slick-next {
+        right: -30px;
+    }
+    
+    .photo-gallery .slick-prev,
+    .photo-gallery .slick-next {
+        width: 40px;
+        height: 40px;
+    }
+    
+    .photo-gallery .slick-prev:before,
+    .photo-gallery .slick-next:before {
+        font-size: 24px;
+    }
+}
