@@ -240,15 +240,12 @@ body {
     z-index: 10;
     width: 60px;
     height: 60px;
-    background: rgba(255, 255, 255, 0.2);
-    border-radius: 50%;
+    background-color: transparent;
     transition: all 0.3s ease;
 }
 
 .hero-slider .slick-prev:hover,
 .hero-slider .slick-next:hover {
-    background: rgba(255, 255, 255, 0.4);
-    transform: scale(1.1);
 }
 
 .hero-slider .slick-prev {
