@@ -456,15 +456,6 @@ img[loading="lazy"].loaded {
     margin-bottom: 0;
 }
 
-.about-section img {
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
-}
-
-.about-section img:hover {
-    transform: scale(1.02);
-}
-
 /* Footer Styles */
 .site-footer {
     margin-top: auto;
