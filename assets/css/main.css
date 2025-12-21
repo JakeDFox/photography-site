@@ -436,6 +436,35 @@ img[loading="lazy"].loaded {
     color: #2c3e50;
 }
 
+/* About Section Styles */
+.about-section {
+    background-color: #f8f9fa;
+}
+
+.about-text {
+    padding: 20px 0;
+}
+
+.about-text p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: 1.5rem;
+    color: #333;
+}
+
+.about-text p:last-child {
+    margin-bottom: 0;
+}
+
+.about-section img {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.about-section img:hover {
+    transform: scale(1.02);
+}
+
 /* Footer Styles */
 .site-footer {
     margin-top: auto;
@@ -512,6 +541,16 @@ img[loading="lazy"].loaded {
     
     .photo-grid {
         grid-template-columns: 1fr;
+    }
+    
+    .about-text {
+        padding: 15px 0;
+    }
+    
+    .about-text p {
+        font-size: 1rem;
+        line-height: 1.7;
+        margin-bottom: 1.25rem;
     }
     
     .photo-gallery .slick-prev {
