@@ -21,7 +21,7 @@ description: Learn more about BF Photography
                 </ul>
             </div>
             <div class="col-md-6">
-                <img src="https://via.placeholder.com/600x400/2c3e50/ffffff?text=Photographer" alt="About BF Photography" class="img-fluid rounded">
+                <img src="https://via.placeholder.com/600x400/2c3e50/ffffff?text=Photographer" alt="About BF Photography" class="img-fluid rounded" loading="lazy">
             </div>
         </div>
     </div>

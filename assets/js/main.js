@@ -65,6 +65,18 @@ $(document).ready(function() {
         // You can add a lightbox library here if needed
         console.log('Image clicked:', imgSrc);
     });
+    
+    // Enhanced lazy loading with fade-in effect
+    $('img[loading="lazy"]').on('load', function() {
+        $(this).addClass('loaded');
+    });
+    
+    // For images that are already loaded (cached)
+    $('img[loading="lazy"]').each(function() {
+        if (this.complete) {
+            $(this).addClass('loaded');
+        }
+    });
 });
 
 console.log('Main.js loaded');

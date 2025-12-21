@@ -10,7 +10,7 @@ description: Browse our photography portfolio
         <div class="photo-grid">
             {% for i in (1..12) %}
             <div class="photo-item">
-                <img src="https://via.placeholder.com/400x300/{{ site.data.colors[i] | default: '2c3e50' }}/ffffff?text=Gallery+{{ i }}" alt="Gallery Photo {{ i }}">
+                <img src="https://via.placeholder.com/400x300/{{ site.data.colors[i] | default: '2c3e50' }}/ffffff?text=Gallery+{{ i }}" alt="Gallery Photo {{ i }}" loading="lazy">
                 <div class="photo-overlay">
                     <h5>Photo {{ i }}</h5>
                     <p>Beautiful photography</p>

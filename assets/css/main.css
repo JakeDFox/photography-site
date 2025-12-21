@@ -138,6 +138,21 @@ body {
     line-height: 1.6;
 }
 
+/* Lazy Loading Styles */
+img[loading="lazy"] {
+    opacity: 0;
+    transition: opacity 0.4s ease-in-out;
+}
+
+img[loading="lazy"].loaded {
+    opacity: 1;
+}
+
+/* Ensure hero images load immediately (no fade) */
+.hero-image {
+    opacity: 1 !important;
+}
+
 /* Header Styles */
 .site-header .navbar-brand {
     font-size: 1.5rem;
