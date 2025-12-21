@@ -133,7 +133,7 @@
   }
 /* Base Styles */
 body {
-    font-family: 'Helvetica Neue', Arial, sans-serif;
+    font-family: 'Montserrat', sans-serif;
     color: #333;
     line-height: 1.6;
 }
@@ -212,15 +212,14 @@ body {
     font-weight: 300;
     margin-bottom: 1rem;
     letter-spacing: 3px;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-    animation: fadeInUp 1s ease;
+    font-family: 'Montserrat', sans-serif;
+    font-style: italic;
 }
 
 .hero-text p {
     font-size: 1.5rem;
-    opacity: 0.95;
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
-    animation: fadeInUp 1.2s ease;
+    font-family: 'Montserrat', sans-serif;
+    font-style: italic;
 }
 
 @keyframes fadeInUp {
