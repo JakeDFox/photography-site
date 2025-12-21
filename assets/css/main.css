@@ -655,3 +655,6 @@ img[loading="lazy"].loaded {
         gap: 10px;
     }
 }
+.container-slim {
+    max-width: 950px;
+}
