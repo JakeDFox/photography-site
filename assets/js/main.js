@@ -79,24 +79,38 @@ $(document).ready(function() {
     });
     
     // Initialize Magnific Popup for gallery images
-    if ($('.gallery-grid').length && typeof $.fn.magnificPopup !== 'undefined') {
-        $('.gallery-grid').magnificPopup({
-            delegate: 'a.gallery-item',
-            type: 'image',
-            tLoading: 'Loading image #%curr%...',
-            mainClass: 'mfp-img-mobile',
-            gallery: {
-                enabled: true,
-                navigateByImgClick: true,
-                preload: [0,1] // Will preload 0 - before current, and 1 after the current image
-            },
-            image: {
-                tError: '<a href="%url%">The image #%curr%</a> could not be loaded.',
-                titleSrc: function(item) {
-                    return item.el.attr('title') + '<small>by Bonnie Fox Photography</small>';
+    if ($('.gallery-grid').length) {
+        // Wait for Magnific Popup to be loaded
+        if (typeof $.fn.magnificPopup !== 'undefined') {
+            $('.gallery-grid').magnificPopup({
+                delegate: 'a.gallery-item',
+                type: 'image',
+                tLoading: 'Loading image #%curr%...',
+                mainClass: 'mfp-img-mobile',
+                gallery: {
+                    enabled: true,
+                    navigateByImgClick: true,
+                    preload: [0, 1],
+                    arrowMarkup: '<button title="%title%" type="button" class="mfp-arrow mfp-arrow-%dir%"></button>',
+                    tPrev: 'Previous (Left arrow key)',
+                    tNext: 'Next (Right arrow key)',
+                    tCounter: '<span class="mfp-counter">%curr% of %total%</span>'
+                },
+                image: {
+                    tError: '<a href="%url%">The image #%curr%</a> could not be loaded.',
+                    titleSrc: function(item) {
+                        return item.el.attr('title') + '<small>by Bonnie Fox Photography</small>';
+                    }
+                },
+                zoom: {
+                    enabled: true,
+                    duration: 300
                 }
-            }
-        });
+            });
+            console.log('Magnific Popup initialized for gallery-grid');
+        } else {
+            console.log('Magnific Popup library not loaded');
+        }
     }
     
     console.log('Main.js loaded');

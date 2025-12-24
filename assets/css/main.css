@@ -581,6 +581,7 @@ img[loading="lazy"].loaded {
 /* Magnific Popup Custom Styles */
 .mfp-bg {
     background-color: rgba(0, 0, 0, 0.9);
+    opacity: 0.9;
 }
 
 .mfp-image-holder .mfp-close,
@@ -589,6 +590,10 @@ img[loading="lazy"].loaded {
     right: 20px;
     top: 20px;
     opacity: 0.8;
+    font-size: 40px;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
 }
 
 .mfp-image-holder .mfp-close:hover,
@@ -600,6 +605,33 @@ img[loading="lazy"].loaded {
     color: #fff;
     text-align: center;
     padding: 10px 0;
+}
+
+.mfp-figure figcaption .mfp-title {
+    color: #fff;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.mfp-figure figcaption .mfp-title small {
+    display: block;
+    font-size: 12px;
+    opacity: 0.8;
+    margin-top: 5px;
+}
+
+.mfp-arrow {
+    opacity: 0.8;
+    transition: opacity 0.3s ease;
+}
+
+.mfp-arrow:hover {
+    opacity: 1;
+}
+
+.mfp-counter {
+    color: #fff;
+    font-size: 14px;
 }
 
 /* Footer Styles */
