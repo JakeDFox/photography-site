@@ -841,3 +841,26 @@ img[loading="lazy"].loaded {
 .container-slim {
     max-width: 950px;
 }
+.mfp-container {
+    text-align: center;
+}
+.mfp-bg {
+    background-color: white;
+    opacity: 0.6;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+.mfp-wrap {
+    position: absolute;
+    z-index: 20;
+    margin: auto;
+    text-align: center;
+    translate: 50%;
+    padding: 2vh 2vw;
+    overflow: scroll;
+    z-index: 21;
+}
