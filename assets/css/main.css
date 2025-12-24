@@ -619,7 +619,7 @@ img[loading="lazy"].loaded {
         padding: 15px 0;
     }
     
-    .about-text p {
+    .feature-text p, .about-text p {
         font-size: 1rem;
         line-height: 1.7;
         margin-bottom: 1.25rem;
