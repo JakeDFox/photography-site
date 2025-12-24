@@ -107,6 +107,9 @@ $(document).ready(function() {
                     duration: 300
                 }
             });
+            $('a.gallery-item').on('click', (e) => {
+                e.preventDefault();
+            });
             console.log('Magnific Popup initialized for gallery-grid');
         } else {
             console.log('Magnific Popup library not loaded');
