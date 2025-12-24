@@ -77,5 +77,27 @@ $(document).ready(function() {
             $(this).addClass('loaded');
         }
     });
+    
+    // Initialize Magnific Popup for gallery images
+    if ($('.gallery-grid').length && typeof $.fn.magnificPopup !== 'undefined') {
+        $('.gallery-grid').magnificPopup({
+            delegate: 'a.gallery-item',
+            type: 'image',
+            tLoading: 'Loading image #%curr%...',
+            mainClass: 'mfp-img-mobile',
+            gallery: {
+                enabled: true,
+                navigateByImgClick: true,
+                preload: [0,1] // Will preload 0 - before current, and 1 after the current image
+            },
+            image: {
+                tError: '<a href="%url%">The image #%curr%</a> could not be loaded.',
+                titleSrc: function(item) {
+                    return item.el.attr('title') + '<small>by Bonnie Fox Photography</small>';
+                }
+            }
+        });
+    }
+    
     console.log('Main.js loaded');
 });
