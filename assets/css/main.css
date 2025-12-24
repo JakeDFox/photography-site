@@ -838,6 +838,9 @@ img[loading="lazy"].loaded {
         gap: 10px;
     }
 }
+.container-med {
+    max-width: 1100px;
+}
 .container-slim {
     max-width: 950px;
 }
