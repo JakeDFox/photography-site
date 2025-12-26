@@ -445,7 +445,7 @@ img[loading="lazy"].loaded {
     padding: 0 20px;
 }
 
-.about-text p {
+p.feature-text, .about-text p {
     font-size: 1.1rem;
     line-height: 1.8;
     margin-bottom: 1.5rem;
