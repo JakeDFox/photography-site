@@ -8,9 +8,12 @@ description: Photography of Collingwood Terminals
     <div class="container">
         <h2 class="text-center mb-5">Collingwood Terminals</h2>
         <div class="gallery-grid">
-            <!-- Images will be added here when available -->
-            <p class="text-center text-muted">Coming soon - Collingwood Terminals photography gallery</p>
+            {% assign images = site.static_files | where_exp: "file", "file.path contains '/gallery/collingwood-terminals/' and file.extname == '.jpg'" %}
+            {% for image in images %}
+                <a href="{{ image.path }}" class="gallery-item" target="_blank">
+                    <img src="{{ image.path }}" alt="Collingwood Terminals {{ forloop.index }}">
+                </a>
+            {% endfor %}
         </div>
     </div>
 </section>
-
