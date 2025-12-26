@@ -716,12 +716,16 @@ img[loading="lazy"].loaded {
         padding: 15px 0;
     }
     
-    p.feature-text, .about-text p {
+    .about-text p {
         font-size: 1rem !important;
         line-height: 1.7 !important;
         margin-bottom: 1.25rem !important;
     }
-    
+    p.feature-text {
+        font-size: 1rem !important;
+        line-height: 1.7 !important;
+        margin-bottom: 1.25rem !important;
+    }
     .gallery-categories {
         grid-template-columns: 1fr;
         gap: 20px;
