@@ -9,9 +9,9 @@ description: Photography of Collingwood Terminals
         <h2 class="text-center mb-5">Collingwood Terminals</h2>
         <div class="gallery-grid">
             {% for file in site.static_files %}
-                {% if file.path contains '/photography-site/assets/images/collingwood-terminals/' %}
-                <a href="{{ file.path }}" class="gallery-item" title="Abandoned Beacon">
-                <img src="{{ file.path }}" loading="lazy">
+                {% if file.path contains '/assets/images/collingwood-terminals/' %}
+                <a href="{{ file.path | relative_url }}" class="gallery-item">
+                <img src="{{ file.path | relative_url }}" loading="lazy">
                 </a>
                 {% endif %}
             {% endfor %}
