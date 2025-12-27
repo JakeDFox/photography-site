@@ -8,11 +8,12 @@ description: Photography of Collingwood Terminals
     <div class="container">
         <h2 class="text-center mb-5">Collingwood Terminals</h2>
         <div class="gallery-grid">
-            {% assign images = site.static_files | where_exp: "file", "file.path contains '/gallery/collingwood-terminals/' and file.extname == '.jpg'" %}
-            {% for image in images %}
-                <a href="{{ image.path }}" class="gallery-item" target="_blank">
-                    <img src="{{ image.path }}" alt="Collingwood Terminals {{ forloop.index }}">
+            {% for file in site.static_files %}
+                {% if file.path contains '/photography-site/assets/images/collingwood-terminals/' %}
+                <a href="{{ file.path }}" class="gallery-item" title="Abandoned Beacon">
+                <img src="{{ file.path }}" loading="lazy">
                 </a>
+                {% endif %}
             {% endfor %}
         </div> 
     </div>
