@@ -10,9 +10,9 @@ description: Photography of Collingwood Terminals
         <div class="gallery-grid">
             {% for file in site.static_files %}
                 {% if file.path contains '/assets/images/collingwood-terminals/' %}
-                <a href="{{ file.path | relative_url }}" class="gallery-item">
-                <img src="{{ file.path | relative_url }}" loading="lazy">
-                </a>
+                    <a href="{{ site.baseurl }}{{ file.path }}" class="gallery-item">
+                        <img src="{{ site.baseurl }}{{ file.path }}" loading="lazy">
+                    </a>
                 {% endif %}
             {% endfor %}
         </div> 
