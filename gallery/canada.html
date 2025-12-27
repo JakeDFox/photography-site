@@ -8,8 +8,13 @@ description: Photography showcasing Canada's beauty
     <div class="container">
         <h2 class="text-center mb-5">Canada</h2>
         <div class="gallery-grid">
-            <!-- Images will be added here when available -->
-            <p class="text-center text-muted">Coming soon - Canada photography gallery</p>
+            {% for file in site.static_files %}
+                {% if file.path contains '/assets/images/canada/' %}
+                    <a href="/photography-site{{ site.baseurl }}{{ file.path }}" class="gallery-item">
+                        <img src="/photography-site{{ site.baseurl }}{{ file.path }}" loading="lazy">
+                    </a>
+                {% endif %}
+            {% endfor %}
         </div>
     </div>
 </section>

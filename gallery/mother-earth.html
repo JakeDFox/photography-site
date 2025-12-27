@@ -8,8 +8,13 @@ description: Nature and landscape photography
     <div class="container">
         <h2 class="text-center mb-5">Mother Earth</h2>
         <div class="gallery-grid">
-            <!-- Images will be added here when available -->
-            <p class="text-center text-muted">Coming soon - Mother Earth photography gallery</p>
+            {% for file in site.static_files %}
+                {% if file.path contains '/assets/images/mother-earth/' %}
+                    <a href="/photography-site{{ site.baseurl }}{{ file.path }}" class="gallery-item">
+                        <img src="/photography-site{{ site.baseurl }}{{ file.path }}" loading="lazy">
+                    </a>
+                {% endif %}
+            {% endfor %}
         </div>
     </div>
 </section>
