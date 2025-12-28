@@ -930,11 +930,10 @@ my-email::before {
 .mfp-img {
     max-height: 95vh !important;
 }
-.mfp-close {
-    opacity: 0 !important;
-}
 .mfp-wrap {
     position: absolute;
+    width: 100vw;
+    height: 100vh;
 }
 .mfp-container {
     padding-top: 2vh;
