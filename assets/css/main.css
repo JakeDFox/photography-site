@@ -911,8 +911,10 @@ p.feature-text, .about-text p {
 
 .nav-pills .nav-link.active, .nav-pills .show>.nav-link {
     color: var(--bs-nav-pills-link-active-color);
-    background-color: darkgrey;
+    background-color: grey;
 }
 .nav-link {
-    background: grey;
+    background: darkgrey;
+    color: white;
+    border-radius: 0;
 }
