@@ -908,3 +908,11 @@ p.feature-text, .about-text p {
       grid-column: span 2 / auto;
     }
   }
+
+.nav-pills .nav-link.active, .nav-pills .show>.nav-link {
+    color: var(--bs-nav-pills-link-active-color);
+    background-color: darkgrey;
+}
+.nav-link {
+    background: grey;
+}
