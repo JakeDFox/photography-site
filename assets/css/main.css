@@ -931,5 +931,5 @@ my-email::before {
     max-height: 95vh !important;
 }
 .mfp-close {
-    display: none !important;
+    opacity: 0 !important;
 }
