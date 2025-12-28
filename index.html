@@ -71,54 +71,27 @@ description: Bonnie Fox Photography
                     <p class="fs-2 my-2 pb-5">View the Gallery</p>
                     <a href="{{ '/photography-site/gallery' | relative_url }}">
                         <div class="image-mosaic">
+                            {% for file in site.static_files %}
+                            {% if file.path contains '/assets/images/georgian-bay-journey/' %}
+                            {% assign cardSize = '' %}
+                            {% case forloop.index %}
+                            {% when 1 %}
+                            {% assign cardSize = 'card-tall card-wide' %}
+                            {% when 2 %}
+                            {% assign cardSize = 'card-tall' %}
+                            {% when 7 %}
+                            {% assign cardSize = 'card-wide' %}
+                            {% when 14 %}
+                            {% assign cardSize = 'card-tall card-wide' %}
+                            {% when 17 %}
+                            {% assign cardSize = 'card-tall' %}
+                            {% endcase %}
                             <div
-                            class="card card-tall card-wide"
-                            style="background-image: url('https://picsum.photos/id/564/1200/800')"
+                            class="card {{ cardSize }}"
+                            style="background-image: url('/photography-site{{ site.baseurl }}{{ file.path }}')"
                             ></div>
-                            <div
-                            class="card card-tall"
-                            style="background-image: url('https://picsum.photos/id/566/800/530')"
-                            ></div>
-                            <div
-                            class="card"
-                            style="background-image: url('https://picsum.photos/id/575/800/530')"
-                            ></div>
-                            <div
-                            class="card"
-                            style="background-image: url('https://picsum.photos/id/626/800/530')"
-                            ></div>
-                            <div
-                            class="card"
-                            style="background-image: url('https://picsum.photos/id/667/800/530')"
-                            ></div>
-                            <div
-                            class="card"
-                            style="background-image: url('https://picsum.photos/id/678/800/530')"
-                            ></div>
-                            <div
-                            class="card card-wide"
-                            style="background-image: url('https://picsum.photos/id/695/800/530')"
-                            ></div>
-                            <div
-                            class="card"
-                            style="background-image: url('https://picsum.photos/id/683/800/530')"
-                            ></div>
-                            <div
-                            class="card"
-                            style="background-image: url('https://picsum.photos/id/693/800/530')"
-                            ></div>
-                            <div
-                            class="card"
-                            style="background-image: url('https://picsum.photos/id/715/800/530')"
-                            ></div>
-                            <div
-                            class="card"
-                            style="background-image: url('https://picsum.photos/id/610/800/530')"
-                            ></div>
-                            <div
-                            class="card"
-                            style="background-image: url('https://picsum.photos/id/599/800/530')"
-                            ></div>
+                            {% endif %}
+                            {% endfor %}
                         </div>
                     </a>
                 </div>
@@ -127,4 +100,6 @@ description: Bonnie Fox Photography
 </section>
 
 <!-- Instagram Feed Section -->
+ {% comment %}
 {% include instagram-feed.html %}
+{% endcomment %}
