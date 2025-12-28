@@ -71,8 +71,8 @@ description: Bonnie Fox Photography
                     <p class="fs-2 my-2 pb-5">View the Gallery</p>
                     <a href="{{ '/photography-site/gallery' | relative_url }}">
                         <div class="image-mosaic">
+                            {% assign mosaicFile = 0 %}
                             {% for file in site.static_files %}
-                                {% assign mosaicFile = 0 %}
                                 {% if file.path contains '/assets/images/mosaic-gallery/' %}
                                     {% assign mosaicFile = mosaicFile | plus: 1 %}
                                     {% assign cardSize = '' %}
