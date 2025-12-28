@@ -72,15 +72,17 @@ description: Bonnie Fox Photography
                     <a href="{{ '/photography-site/gallery' | relative_url }}">
                         <div class="image-mosaic">
                             {% for file in site.static_files %}
+                                {% assign mosaicFile = 0 %}
                                 {% if file.path contains '/assets/images/mosaic-gallery/' %}
+                                    {% assign mosaicFile = mosaicFile | plus: 1 %}
                                     {% assign cardSize = '' %}
-                                    {% if forloop.index == 1 or forloop.index == 14 %}
+                                    {% if mosaicFile == 1 or mosaicFile == 14 %}
                                     {% assign cardSize = 'card-tall card-wide' %}
                                     {% endif %}
-                                    {% if forloop.index == 2 or forloop.index == 17 %}
+                                    {% if mosaicFile == 2 or mosaicFile == 17 %}
                                     {% assign cardSize = 'card-tall' %}
                                     {% endif %}
-                                    {% if forloop.index == 7 %}
+                                    {% if mosaicFile == 7 %}
                                     {% assign cardSize = 'card-wide' %}
                                     {% endif %}
                                     <div
