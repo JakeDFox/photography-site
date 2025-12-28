@@ -912,6 +912,7 @@ p.feature-text, .about-text p {
     background: white;
     color: gray;
     border-radius: 0 !important;
+    border: 1px solid darkgray;
 }
 .nav-pills .nav-link.active, .nav-pills .show>.nav-link {
     color: var(--bs-nav-pills-link-active-color);
