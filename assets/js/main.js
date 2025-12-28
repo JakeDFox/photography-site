@@ -105,10 +105,6 @@ $(document).ready(function() {
                     titleSrc: function(item) {
                         return item.el.attr('title') + '<small>by Bonnie Fox Photography</small>';
                     }
-                },
-                zoom: {
-                    enabled: true,
-                    duration: 300
                 }
             });
             $('a.gallery-item').on('click', (e) => {
@@ -119,6 +115,5 @@ $(document).ready(function() {
             console.log('Magnific Popup library not loaded');
         }
     }
-    
     console.log('Main.js loaded');
 });
