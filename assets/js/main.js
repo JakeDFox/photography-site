@@ -89,17 +89,7 @@ $(document).ready(function() {
             $('.gallery-grid').magnificPopup({
                 delegate: 'a.gallery-item',
                 type: 'image',
-                tLoading: 'Loading image #%curr%...',
                 mainClass: 'mfp-img-mobile',
-                gallery: {
-                    enabled: true,
-                    navigateByImgClick: true,
-                    preload: [0, 1],
-                    arrowMarkup: '<button title="%title%" type="button" class="mfp-arrow mfp-arrow-%dir%"></button>',
-                    tPrev: 'Previous (Left arrow key)',
-                    tNext: 'Next (Right arrow key)',
-                    tCounter: '<span class="mfp-counter">%curr% of %total%</span>'
-                },
                 image: {
                     tError: '<a href="%url%">The image #%curr%</a> could not be loaded.',
                     titleSrc: function(item) {
