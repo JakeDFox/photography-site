@@ -908,13 +908,12 @@ p.feature-text, .about-text p {
       grid-column: span 2 / auto;
     }
   }
-
+.nav-link {
+    background: white;
+    color: gray;
+    border-radius: 0 !important;
+}
 .nav-pills .nav-link.active, .nav-pills .show>.nav-link {
     color: var(--bs-nav-pills-link-active-color);
-    background-color: grey;
-}
-.nav-link {
-    background: darkgrey;
-    color: white;
-    border-radius: 0;
+    background-color: darkgrey;
 }
