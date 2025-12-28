@@ -5,136 +5,157 @@ description: Get in touch with BF Photography
 ---
 
 <section class="section">
-    <div class="container">
-        <h2 class="text-center mb-5"><img src="/photography-site/assets/images/logo.png" class="logo-inline">Purchase art</h2>
-        <div class="row align-items-start">
-                <div class="col">
-                    <p class="fs-3 pb-2">Prints</p>
-                    <p>
-                        Images in the galleries are available for purchase. All images are professionally printed on high quality photographic paper. The print is signed on the back and ready for framing. My photographs are printed on demand. Prints will be sent out within 5 business days of receiving payment. I will send out a confirmation email once your order has been shipped.
-                    </p>
-                </div>
-                <div class="col">
-                    <p class="fs-3 pb-2">Canvas prints</p>
-                    <p>Bonnie's prints are available on premier art canvas and wrapped around a 1½ inch wooden stretcher frame (gallery wrap) and ready to hang.
-                    </p>
-                </div>
-                <div class="col">
-                    <p class="fs-3 pb-2">Photo card</p>
-                    <p>Images are available on blank photo greeting cards. The cards include an envelope. There is a minimum order of 20 cards, with a minimum of 5 cards per image.
-                    </p>
-                </div>
+  <div class="container">
+    <h2 class="text-center mb-5"><img src="/photography-site/assets/images/logo.png" class="logo-inline">Purchase art</h2>
+    <div class="row align-items-start">
+      <div class="col">
+          <p class="fs-3 pb-2">Prints</p>
+          <p>
+              Images in the galleries are available for purchase. All images are professionally printed on high quality photographic paper. The print is signed on the back and ready for framing. My photographs are printed on demand. Prints will be sent out within 5 business days of receiving payment. I will send out a confirmation email once your order has been shipped.
+          </p>
+      </div>
+      <div class="col">
+          <p class="fs-3 pb-2">Canvas prints</p>
+          <p>Bonnie's prints are available on premier art canvas and wrapped around a 1½ inch wooden stretcher frame (gallery wrap) and ready to hang.
+          </p>
+      </div>
+      <div class="col">
+          <p class="fs-3 pb-2">Photo card</p>
+          <p>Images are available on blank photo greeting cards. The cards include an envelope. There is a minimum order of 20 cards, with a minimum of 5 cards per image.
+          </p>
+      </div>
+    </div>
+    <div class="align-items-center mx-auto">
+      <h4 class="text-center py-2">Sample Sizes and Prices</h4>
+    </div>
+    <div class="mx-auto">
+      <!-- Tabs -->
+      <ul class="nav nav-pills nav-fill justify-content-center" id="priceTabs" role="tablist">
+        <li class="nav-item" role="presentation">
+          <button class="nav-link active"
+                  id="prints-tab"
+                  data-bs-toggle="tab"
+                  data-bs-target="#prints"
+                  type="button"
+                  role="tab">
+            Prints
+          </button>
+        </li>
+    
+        <li class="nav-item" role="presentation">
+          <button class="nav-link"
+                  id="canvases-tab"
+                  data-bs-toggle="tab"
+                  data-bs-target="#canvases"
+                  type="button"
+                  role="tab">
+            Canvases
+          </button>
+        </li>
+    
+        <li class="nav-item" role="presentation">
+          <button class="nav-link"
+                  id="cards-tab"
+                  data-bs-toggle="tab"
+                  data-bs-target="#cards"
+                  type="button"
+                  role="tab">
+            Cards
+          </button>
+        </li>
+      </ul>
+      <!-- Tab content -->
+      <div class="tab-content mt-3" id="priceTabsContent">
+        <!-- Prints -->
+        <div class="tab-pane fade show active" id="prints" role="tabpanel">
+          <table class="table prints"> 
+            <tbody>
+              <tr>
+                <td>8 in. X 10 in.</td>
+                <td class="text-end">$40.00</td>
+              </tr>
+              <tr>
+                <td>11 in. X 14 in.</td>
+                <td class="text-end">$65.00</td>
+              </tr>
+              <tr>
+                <td>16 in. X 20 in.</td>
+                <td class="text-end">$80.00</td>
+              </tr>
+            </tbody>
+          </table>
         </div>
-        <div class="align-items-center mx-auto">
-        <h4 class="text-center py-2">Sample Sizes and Prices</h4>
+    
+        <!-- Canvases -->
+        <div class="tab-pane fade"
+              id="canvases"
+              role="tabpanel">
+          <table class="table canvases">
+            <tbody>
+              <tr>
+                <td>18 in. X 12 in.</td>
+                <td class="text-end">$120.00</td>
+              </tr>
+              <tr>
+                <td>24 in. X 40 in.</td>
+                <td class="text-end">$240.00</td>
+              </tr>
+              <tr>
+                <td>36 in. X 40 in.</td>
+                <td class="text-end">$325.00</td>
+              </tr>
+            </tbody>
+          </table>
         </div>
-        <div class="mx-auto">
-            <!-- Tabs -->
-            <ul class="nav nav-pills nav-fill justify-content-center" id="priceTabs" role="tablist">
-              <li class="nav-item" role="presentation">
-                <button class="nav-link active"
-                        id="prints-tab"
-                        data-bs-toggle="tab"
-                        data-bs-target="#prints"
-                        type="button"
-                        role="tab">
-                  Prints
-                </button>
-              </li>
-          
-              <li class="nav-item" role="presentation">
-                <button class="nav-link"
-                        id="canvases-tab"
-                        data-bs-toggle="tab"
-                        data-bs-target="#canvases"
-                        type="button"
-                        role="tab">
-                  Canvases
-                </button>
-              </li>
-          
-              <li class="nav-item" role="presentation">
-                <button class="nav-link"
-                        id="cards-tab"
-                        data-bs-toggle="tab"
-                        data-bs-target="#cards"
-                        type="button"
-                        role="tab">
-                  Cards
-                </button>
-              </li>
-            </ul>
-          
-            <!-- Tab content -->
-            <div class="tab-content mt-3" id="priceTabsContent">
-          
-              <!-- Prints -->
-              <div class="tab-pane fade show active"
-                   id="prints"
-                   role="tabpanel">
-                <table class="table prints">
-                  <tbody>
-                    <tr>
-                      <td>8 in. X 10 in.</td>
-                      <td class="text-end">$40.00</td>
-                    </tr>
-                    <tr>
-                      <td>11 in. X 14 in.</td>
-                      <td class="text-end">$65.00</td>
-                    </tr>
-                    <tr>
-                      <td>16 in. X 20 in.</td>
-                      <td class="text-end">$80.00</td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-          
-              <!-- Canvases -->
-              <div class="tab-pane fade"
-                   id="canvases"
-                   role="tabpanel">
-                <table class="table canvases">
-                  <tbody>
-                    <tr>
-                      <td>18 in. X 12 in.</td>
-                      <td class="text-end">$120.00</td>
-                    </tr>
-                    <tr>
-                      <td>24 in. X 40 in.</td>
-                      <td class="text-end">$240.00</td>
-                    </tr>
-                    <tr>
-                      <td>36 in. X 40 in.</td>
-                      <td class="text-end">$325.00</td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-          
-              <!-- Cards -->
-              <div class="tab-pane fade"
-                   id="cards"
-                   role="tabpanel">
-                <table class="table cards">
-                  <tbody>
-                    <tr>
-                      <td>Blank Photo Card</td>
-                      <td class="text-end">$5.00</td>
-                    </tr>
-                    <tr>
-                      <td>Gift Cards</td>
-                      <td class="text-end">Denominations; $10.00, $25.00, $50.00, $100.00</td>
-                    </tr>
-                    <tr>
-                      <td>Custom</td>
-                      <td class="text-end">Prints on metal or acrylic also available</td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-            </div>
-          </div>
+    
+        <!-- Cards -->
+        <div class="tab-pane fade"
+              id="cards"
+              role="tabpanel">
+          <table class="table cards">
+            <tbody>
+              <tr>
+                <td>Blank Photo Card</td>
+                <td class="text-end">$5.00</td>
+              </tr>
+              <tr>
+                <td>Gift Cards</td>
+                <td class="text-end">Denominations; $10.00, $25.00, $50.00, $100.00</td>
+              </tr>
+              <tr>
+                <td>Custom</td>
+                <td class="text-end">Prints on metal or acrylic also available</td>
+              </tr>
+            </tbody>
+          </table>
         </div>
+      </div>
+    </div>
+    <div class="mx-auto">
+      <h4 class="text-center py-2">Custom</h4>
+      <div class="align-items-start">
+        <p>If you cannot find what you need please contact me. I can help you with the following custom orders:
+        </p>
+        <ul>
+          <li>Prints larger than those listed and custom sizes.</li>
+          <li>You found a print of mine on another site and wish to order it.</li>
+          <li>You like a photo but would prefer it in black and white.</li>
+          <li>I will send you a sample low resolution image in black and white for your approval. </li>
+          <li>Local delivery of framed prints. </li>
+        </ul>      
+      </div>
+    </div>
+    <div class="align-items-center mx-auto">
+      <h4 class="text-center py-2">Contact</h4>
+      <p>To purchase an image or for more information, submit the name of the image along with the size and type on the
+      </p>
+      <p><a href="https://docs.google.com/forms/d/e/1FAIpQLSf_I-7x1ppcA6IrfA4cXwg8lpYVUPWlGfWVatUlu3ONJpwDmw/viewform?usp=sf_link"><b>contact form here</b></a></p>
+      <p>We will respond to you via return email to arrange payment. All prices Canadian.
+        Depending on the original, final size and resolution may be subject to limitations.
+      </p>
+      <p class="text-center"> <a href="mailto:infoATbonniefoxphotographyDOTcom" onclick="this.href=this.href .replace(/AT/,'@') .replace(/DOT/,'.')">Email Bonnie</a> 
+          (<my-email data-user="info" data-domain="bonniefoxphotography.com"></my-email>)
+      </p>
+    </div>
+  </div>
 </section>
-
