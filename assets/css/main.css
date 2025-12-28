@@ -933,3 +933,9 @@ my-email::before {
 .mfp-close {
     opacity: 0 !important;
 }
+.mfp-wrap {
+    position: absolute;
+}
+.mfp-container {
+    padding-top: 2vh;
+}
