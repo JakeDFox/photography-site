@@ -75,15 +75,15 @@ description: Bonnie Fox Photography
                             {% if file.path contains '/assets/images/georgian-bay-journey/' %}
                             {% assign cardSize = '' %}
                             {% case forloop.index %}
-                            {% when 1 %}
+                            {% when forloop.index == 1 %}
                             {% assign cardSize = 'card-tall card-wide' %}
-                            {% when 2 %}
+                            {% when forloop.index == 2 %}
                             {% assign cardSize = 'card-tall' %}
-                            {% when 7 %}
+                            {% when forloop.index == 7 %}
                             {% assign cardSize = 'card-wide' %}
-                            {% when 14 %}
+                            {% when forloop.index == 14 %}
                             {% assign cardSize = 'card-tall card-wide' %}
-                            {% when 17 %}
+                            {% when forloop.index == 17 %}
                             {% assign cardSize = 'card-tall' %}
                             {% endcase %}
                             <div
