@@ -94,6 +94,24 @@ description: Bonnie Fox Photography
                         </div>
                     </a>
                 </div>
+                <div class="lg-16 my-4 py-5 text-center">
+                    <p class="fs-2 my-2 pb-5">Order Cards</p>
+                    <a href="{{ '/photography-site/contact' | relative_url }}">
+                        <div class="image-mosaic">
+                            {% assign mosaicFile = 0 %}
+                            {% for file in site.static_files %}
+                                {% if file.path contains '/assets/images/mosaic-card-gallery/' %}
+                                    {% assign mosaicFile = mosaicFile | plus: 1 %}
+                                    {% assign cardSize = 'card-tall card-wide' %}
+                                    <div
+                                    class="card {{ cardSize }}" data-card-number="{{ mosaicFile }}"
+                                    style="background-image: url('/photography-site{{ site.baseurl }}{{ file.path }}')"
+                                    ></div>
+                                {% endif %}
+                            {% endfor %}
+                        </div>
+                    </a>
+                </div>
             </div>
         </div>
 </section>
