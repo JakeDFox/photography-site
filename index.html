@@ -86,7 +86,7 @@ description: Bonnie Fox Photography
                                     {% assign cardSize = 'card-wide' %}
                                     {% endif %}
                                     <div
-                                    class="card {{ cardSize }}"
+                                    class="card {{ cardSize }}" data-card-number="{{ mosaicFile }}"
                                     style="background-image: url('/photography-site{{ site.baseurl }}{{ file.path }}')"
                                     ></div>
                                 {% endif %}
