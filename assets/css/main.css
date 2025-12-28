@@ -908,7 +908,7 @@ p.feature-text, .about-text p {
       grid-column: span 2 / auto;
     }
   }
-.nav-link {
+.nav-pills .nav-link {
     background: white;
     color: gray;
     border-radius: 0 !important;
