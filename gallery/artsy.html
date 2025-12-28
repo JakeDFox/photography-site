@@ -13,7 +13,6 @@ description: Artsy photographs
                     <a href="/photography-site{{ site.baseurl }}{{ file.path }}" class="gallery-item">
                         <img src="/photography-site{{ site.baseurl }}{{ file.path }}" loading="lazy">
                     </a>
-                    {{ file.path | remove: '/assets/images/artsy/' | remove: '.jpg' }}
                 {% endif %}
             {% endfor %}
         </div>
