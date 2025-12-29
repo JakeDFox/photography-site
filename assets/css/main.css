@@ -866,7 +866,6 @@ p.feature-text, .about-text p {
     position: fixed;
     margin: auto;
     text-align: center;
-    translate: 50%;
     padding: 2vh 2vw;
     overflow: scroll;
     z-index: 21;
