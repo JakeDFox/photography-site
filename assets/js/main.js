@@ -105,21 +105,38 @@ $(document).ready(function() {
             console.log('Magnific Popup library not loaded');
         }
     }
-    $.getJSON('https://feeds.behold.so/IkvtKUTjdFea5TIXeNAo').done(function(data) {
-        var $feedContainer = $('#instagram-feed');
-        if ($feedContainer.length) {
-            data.posts.forEach(function(post) {
-                var postElement = $('<div class="social-post"></div>');
-                var postLink = $('<a></a>').attr('href', post.permalink).attr('target', '_blank');
-                var postImage = $('<img>').attr('src', post.sizes['small'].mediaUrl).attr('alt', post.caption || 'Social Media Post');
-                postLink.append(postImage);
-                postElement.append(postLink);
-                $feedContainer.append(postElement);
-            });
+    const observer = new IntersectionObserver(function (entries) {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            $(entry.target).addClass('in-view');
+            instagramFeed();
+            observer.unobserve(entry.target);
         }
-    }).fail(function() {
-        console.log('Failed to load social media feed');
+    });
+    }, {
+        threshold: 0.2
     });
 
+    $('#instagram-feed').each(function () {
+        observer.observe(this);
+    });
+
+    function instagramFeed() {
+        $.getJSON('https://feeds.behold.so/IkvtKUTjdFea5TIXeNAo').done(function(data) {
+            var $feedContainer = $('#instagram-feed');
+            if ($feedContainer.length) {
+                data.posts.forEach(function(post) {
+                    var postElement = $('<div class="social-post"></div>');
+                    var postLink = $('<a></a>').attr('href', post.permalink).attr('target', '_blank');
+                    var postImage = $('<img>').attr('src', post.sizes['small'].mediaUrl).attr('alt', post.caption || 'Social Media Post');
+                    postLink.append(postImage);
+                    postElement.append(postLink);
+                    $feedContainer.append(postElement);
+                });
+            }
+        }).fail(function() {
+            console.log('Failed to load social media feed');
+        });
+    }
     console.log('Main.js loaded');
 });
