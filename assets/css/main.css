@@ -947,3 +947,6 @@ my-email::before {
     display: inline-block;
     width: 25%;
 }
+.social-post img {
+    height: 200px;
+}
