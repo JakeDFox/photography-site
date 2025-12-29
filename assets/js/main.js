@@ -134,6 +134,7 @@ $(document).ready(function() {
                     $feedContainer.append(postElement);
                 });
             }
+            console.log('Social media feed loaded');
         }).fail(function() {
             console.log('Failed to load social media feed');
         });
