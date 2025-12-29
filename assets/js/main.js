@@ -111,7 +111,7 @@ $(document).ready(function() {
             data.posts.forEach(function(post) {
                 var postElement = $('<div class="social-post"></div>');
                 var postLink = $('<a></a>').attr('href', post.permalink).attr('target', '_blank');
-                var postImage = $('<img>').attr('src', post.mediaUrl).attr('alt', post.caption || 'Social Media Post');
+                var postImage = $('<img>').attr('src', post.sizes['small'].mediaUrl).attr('alt', post.caption || 'Social Media Post');
                 postLink.append(postImage);
                 postElement.append(postLink);
                 $feedContainer.append(postElement);
