@@ -105,5 +105,21 @@ $(document).ready(function() {
             console.log('Magnific Popup library not loaded');
         }
     }
+    $.getJSON('https://feeds.behold.so/IkvtKUTjdFea5TIXeNAo').done(function(data) {
+        var $feedContainer = $('#instagram-feed');
+        if ($feedContainer.length) {
+            data.posts.forEach(function(post) {
+                var postElement = $('<div class="social-post"></div>');
+                var postLink = $('<a></a>').attr('href', post.url).attr('target', '_blank');
+                var postImage = $('<img>').attr('src', post.mediaUrl).attr('alt', post.caption || 'Social Media Post');
+                postLink.append(postImage);
+                postElement.append(postLink);
+                $feedContainer.append(postElement);
+            });
+        }
+    }).fail(function() {
+        console.log('Failed to load social media feed');
+    });
+
     console.log('Main.js loaded');
 });
