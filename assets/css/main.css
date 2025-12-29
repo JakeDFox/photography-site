@@ -768,7 +768,7 @@ p.feature-text, .about-text p {
 
 /* Instagram Feed Styles */
 .instagram-feed-section {
-    background-color: #f8f9fa;
+    background-color: #ffffff;
 }
 
 .instagram-feed-wrapper {
@@ -937,4 +937,13 @@ my-email::before {
 }
 .mfp-container {
     padding-top: 2vh;
+}
+#instagram-feed {
+    display: block;
+    text-align: center;
+    width: 100%;
+}
+.social-post {
+    display: inline-block;
+    width: 25%;
 }
