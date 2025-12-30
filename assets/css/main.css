@@ -963,3 +963,6 @@ my-email::before {
 .mfp-image-holder .mfp-close, .mfp-iframe-holder .mfp-close {
     color: #000000;
 }
+.mfp-title, .mfp-preloader {
+    display: none;
+}
