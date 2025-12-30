@@ -954,7 +954,7 @@ my-email::before {
         width: 25%;
     }
 }
-.social-post .in-view {
+.in-view .social-post {
     opacity: 1;
 }
 .social-post img {
