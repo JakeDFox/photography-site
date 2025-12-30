@@ -941,15 +941,21 @@ my-email::before {
     display: block;
     text-align: center;
     width: 100%;
+    height: 200px;
 }
 .social-post {
     display: inline-block;
     width: 50%;
+    opacity: 0;
+    transition: opacity ease-in-out .3s;
 }
 @media only screen and (min-width: 768px) {
     .social-post {
         width: 25%;
     }
+}
+.social-post .in-view {
+    opacity: 1;
 }
 .social-post img {
     height: 200px;
