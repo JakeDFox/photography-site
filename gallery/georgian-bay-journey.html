@@ -7,14 +7,14 @@ description: Explore the beautiful Georgian Bay area through photography
 <section class="section gallery-page-section">
     <div class="container">
         <h2 class="text-center mb-5">Georgian Bay Journey</h2>
-        <div class="gallery-grid">
+        <div id="gallery">
             {% for file in site.static_files %}
-                {% if file.path contains '/assets/images/georgian-bay-journey/' %}
-                    <a href="/photography-site{{ site.baseurl }}{{ file.path }}" class="gallery-item">
-                        <img src="/photography-site{{ site.baseurl }}{{ file.path }}" loading="lazy">
-                    </a>
+                {% if file.path contains '/assets/images/mother-earth/' %}
+                <a href="/photography-site{{ site.baseurl }}{{ file.path }}">
+                    <img alt="{{ file.path | remove: '/assets/images/mother-earth/' | remove: '.jpg' }}" src="/photography-site{{ site.baseurl }}{{ file.path }}"/>
+                </a>
                 {% endif %}
             {% endfor %}
-        </div>
+        </div>        
     </div>
 </section>
