@@ -18,7 +18,7 @@ description: Wildlife and animal photography
             {% endfor %}
         </div>
         {% endcomment %}
-        <div id="mygallery" >
+        <div id="gallery">
             {% for file in site.static_files %}
                 {% if file.path contains '/assets/images/animals/' %}
                 <a href="/photography-site{{ site.baseurl }}{{ file.path }}">
