@@ -8,8 +8,13 @@ description: Wildlife and animal photography
     <div class="container">
         <h2 class="text-center mb-5">Animals</h2>
         <div class="gallery-grid">
-            <!-- Images will be added here when available -->
-            <p class="text-center text-muted">Coming soon - Animal photography gallery</p>
+            {% for file in site.static_files %}
+                {% if file.path contains '/assets/images/animals/' %}
+                    <a href="/photography-site{{ site.baseurl }}{{ file.path }}" class="gallery-item">
+                        <img src="/photography-site{{ site.baseurl }}{{ file.path }}" loading="lazy">
+                    </a>
+                {% endif %}
+            {% endfor %}
         </div>
     </div>
 </section>
