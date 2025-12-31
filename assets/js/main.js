@@ -116,6 +116,7 @@ $(document).ready(function() {
     }, {
         threshold: 0.2
     });
+    $("#mygallery").justifiedGallery();
 
     $('#instagram-feed').each(function () {
         observer.observe(this);

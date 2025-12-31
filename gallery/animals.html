@@ -7,6 +7,7 @@ description: Wildlife and animal photography
 <section class="section gallery-page-section">
     <div class="container">
         <h2 class="text-center mb-5">Animals</h2>
+        {% comment %}
         <div class="gallery-grid">
             {% for file in site.static_files %}
                 {% if file.path contains '/assets/images/animals/' %}
@@ -16,6 +17,16 @@ description: Wildlife and animal photography
                 {% endif %}
             {% endfor %}
         </div>
+        {% endcomment %}
+        <div id="mygallery" >
+            {% for file in site.static_files %}
+                {% if file.path contains '/assets/images/animals/' %}
+                <a href="/photography-site{{ site.baseurl }}{{ file.path }}">
+                    <img alt="Title 1" src="/photography-site{{ site.baseurl }}{{ file.path }}"/>
+                </a>
+                {% endif %}
+            {% endfor %}
+        </div>        
     </div>
 </section>
 
