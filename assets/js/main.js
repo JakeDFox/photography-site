@@ -125,7 +125,7 @@ $(document).ready(function() {
     }, {
         threshold: 0.2
     });
-    $("#mygallery").justifiedGallery();
+    $("#mygallery").justifiedGallery({ rowHeight: 320 });
 
     $('#instagram-feed').each(function () {
         observer.observe(this);
