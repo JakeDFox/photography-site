@@ -1078,7 +1078,9 @@ my-email::before {
 #gallery {
     opacity: 0;
     transition: ease-in-out .5s;
+    min-height: 100vh;
 }
 #gallery.justified-gallery {
     opacity: 1;
+    min-height: auto;
 }
