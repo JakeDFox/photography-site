@@ -9,9 +9,9 @@ description: Artsy photographs
         <h2 class="text-center mb-5">Artsy</h2>
         <div id="gallery">
             {% for file in site.static_files %}
-                {% if file.path contains '/assets/images/mother-earth/' %}
+                {% if file.path contains '/assets/images/artsy/' %}
                 <a href="/photography-site{{ site.baseurl }}{{ file.path }}">
-                    <img alt="{{ file.path | remove: '/assets/images/mother-earth/' | remove: '.jpg' }}" src="/photography-site{{ site.baseurl }}{{ file.path }}"/>
+                    <img alt="{{ file.path | remove: '/assets/images/artsy/' | remove: '.jpg' }}" src="/photography-site{{ site.baseurl }}{{ file.path }}"/>
                 </a>
                 {% endif %}
             {% endfor %}
