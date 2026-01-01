@@ -1084,3 +1084,7 @@ my-email::before {
     opacity: 1;
     min-height: auto;
 }
+.navbar .logo-inline {
+    height: 60px;
+    padding-right: 10px;
+}
