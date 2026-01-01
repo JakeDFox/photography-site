@@ -31,7 +31,9 @@ $(document).ready(function() {
             nextArrow: '<button type="button" class="slick-next"><i class="fas fa-chevron-right"></i></button>'
         });
     }
-    
+    $("#gallery").justifiedGallery({ rowHeight: 320 });
+    $("#gallery").addClass('loaded');
+
     // Initialize Slick Slider for photo gallery (if exists)
     if ($('.photo-gallery').length) {
         $('.photo-gallery').slick({
@@ -125,7 +127,6 @@ $(document).ready(function() {
     }, {
         threshold: 0.2
     });
-    $("#gallery").justifiedGallery({ rowHeight: 320 });
 
     $('#instagram-feed').each(function () {
         observer.observe(this);

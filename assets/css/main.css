@@ -1075,3 +1075,10 @@ my-email::before {
 .mfp-title, .mfp-preloader {
     display: none;
 }
+#gallery {
+    opacity: 0;
+    transition: ease-in-out .5s;
+}
+#gallery.loaded {
+    opacity: 1;
+}
