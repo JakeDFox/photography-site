@@ -70,8 +70,10 @@ description: Bonnie Fox Photography
             </div>
         </div>
         <div class="lg-16 my-4 py-5 text-center">
-            <p class="fs-2 my-2 pb-2">View the Gallery</p>
-            <p class="pb-5 container-slim">Every photograph tells a story. These images reflect real moments, genuine emotion, and the simple beauty found in everyday life.</p>
+            <div class=container-slim">
+                <p class="fs-2 my-2 pb-2">View the Gallery</p>
+                <p class="pb-5 container-slim">Every photograph tells a story. These images reflect real moments, genuine emotion, and the simple beauty found in everyday life.</p>
+            </div>
             <a href="{{ '/photography-site/gallery' | relative_url }}">
                 <div class="image-mosaic">
                     {% assign mosaicFile = 0 %}
@@ -112,8 +114,12 @@ description: Bonnie Fox Photography
                     </a>
                 </div>
                 <div class="lg-16 my-4 py-5 text-center">
-                    <p class="fs-2 my-2 pb-2">Order blank photo cards</p>
-                    <p class="pb-5 container-slim">Simple, timeless photo cards featuring original photographs. Perfect for personal notes, special occasions, or thoughtful gifts.</p>
+                    <div class=container-slim">
+                        <p class="fs-2 my-2 pb-2">Order blank photo cards</p>
+                        <p class="pb-5">Simple, timeless photo cards featuring original photographs. Perfect for personal notes, special occasions, or thoughtful gifts.
+                        Write your own personal greeeting on a blank photo card.
+                        </p>
+                    </div>
                     <a href="{{ '/photography-site/contact' | relative_url }}">
                         <div class="image-mosaic">
                             {% assign mosaicFile = 0 %}
@@ -129,8 +135,7 @@ description: Bonnie Fox Photography
                             {% endfor %}
                         </div>
                     </a>
-                    <p class="py-4">Write your own personal greeeting on a blank photo card.</p>
-                    <button type="button" class="btn btn-secondary">Shop Now</button>
+                    <button type="button" class="btn btn-secondary py-5">Shop Now</button>
                 </div>
             </div>
         </div>
