@@ -108,8 +108,8 @@ $(document).ready(function() {
     if ($('#gallery').length) {
         // Wait for Magnific Popup to be loaded
         if (typeof $.fn.magnificPopup !== 'undefined') {
-            $('.gallery-grid').magnificPopup({
-                delegate: 'a.gallery-item',
+            $('#gallery').magnificPopup({
+                delegate: 'a.jg-entry',
                 type: 'image',
                 mainClass: 'mfp-img-mobile',
                 image: {
