@@ -1077,8 +1077,8 @@ my-email::before {
 }
 #gallery {
     opacity: 0;
-    transition: ease-in-out .5s;
-    min-height: 100vh;
+    transition: opacity ease-in-out .5s;
+    min-height: 100vh !important;
 }
 #gallery.justified-gallery {
     opacity: 1;
