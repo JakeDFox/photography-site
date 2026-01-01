@@ -78,6 +78,7 @@ description: Bonnie Fox Photography
                     {% for file in site.static_files %}
                         {% if file.path contains '/assets/images/mosaic-gallery/' %}
                             {% assign mosaicFile = mosaicFile | plus: 1 %}
+                            {% unless mosaicFile > 13 %}
                             {% assign cardSize = '' %}
                             {% if mosaicFile == 1 or mosaicFile == 14 %}
                             {% assign cardSize = 'card-tall card-wide' %}
@@ -92,6 +93,7 @@ description: Bonnie Fox Photography
                             class="card {{ cardSize }}" data-card-number="{{ mosaicFile }}"
                             style="background-image: url('/photography-site{{ site.baseurl }}{{ file.path }}')"
                             ></div>
+                            {% endunless %}
                         {% endif %}
                     {% endfor %}
                 </div>
