@@ -691,7 +691,7 @@ p.feature-text, .about-text p {
 /* Magnific Popup Custom Styles */
 .mfp-bg {
     background-color: rgba(0, 0, 0, 0.9);
-    opacity: 0.9;
+    opacity: 0;
 }
 
 .mfp-image-holder .mfp-close,
