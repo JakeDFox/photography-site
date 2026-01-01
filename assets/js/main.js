@@ -93,7 +93,7 @@ $(document).ready(function() {
     });
     
     // Initialize Magnific Popup for gallery images
-    if ($('.gallery-grid').length) {
+    if ($('#gallery').length) {
         // Wait for Magnific Popup to be loaded
         if (typeof $.fn.magnificPopup !== 'undefined') {
             $('.gallery-grid').magnificPopup({
