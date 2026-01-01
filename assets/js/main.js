@@ -32,7 +32,6 @@ $(document).ready(function() {
         });
     }
     $("#gallery").justifiedGallery({ rowHeight: 320 });
-    $("#gallery").addClass('loaded');
 
     // Initialize Slick Slider for photo gallery (if exists)
     if ($('.photo-gallery').length) {
