@@ -576,7 +576,7 @@ p.feature-text, .about-text p {
 .gallery-categories {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 4px;
+    gap: 8px;
     margin-top: 40px;
 }
 
