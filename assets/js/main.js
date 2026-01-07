@@ -43,7 +43,7 @@ $(document).ready(function() {
             nextArrow: '<button type="button" class="slick-next"><i class="fas fa-chevron-right"></i></button>'
         });
     }
-    $("#gallery").justifiedGallery({ rowHeight: 400 });
+    $("#gallery").justifiedGallery({ rowHeight: 400, margins: 4 });
 
     // Initialize Slick Slider for photo gallery (if exists)
     if ($('.photo-gallery').length) {
