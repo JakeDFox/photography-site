@@ -10,8 +10,8 @@ description: Travel photography from around the world
         <div id="gallery">
             {% for file in site.static_files %}
                 {% if file.path contains '/assets/images/around-the-world/' %}
-                <a href="/photography-site{{ site.baseurl }}{{ file.path }}">
-                    <img alt="{{ file.path | remove: '/assets/images/around-the-world/' | remove: '.jpg' }}" src="/photography-site{{ site.baseurl }}{{ file.path }}"/>
+                <a href="{{ site.baseurl }}{{ file.path }}">
+                    <img alt="{{ file.path | remove: '/assets/images/around-the-world/' | remove: '.jpg' }}" src="{{ site.baseurl }}{{ file.path }}"/>
                 </a>
                 {% endif %}
             {% endfor %}

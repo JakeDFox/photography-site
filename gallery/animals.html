@@ -10,8 +10,8 @@ description: Wildlife and animal photography
         <div id="gallery">
             {% for file in site.static_files %}
                 {% if file.path contains '/assets/images/animals/' %}
-                <a href="/photography-site{{ site.baseurl }}{{ file.path }}">
-                    <img alt="{{ file.path | remove: '/assets/images/animals/' | remove: '.jpg' | remove: '.JPG' }}" src="/photography-site{{ site.baseurl }}{{ file.path }}"/>
+                <a href="{{ site.baseurl }}{{ file.path }}">
+                    <img alt="{{ file.path | remove: '/assets/images/animals/' | remove: '.jpg' | remove: '.JPG' }}" src="{{ site.baseurl }}{{ file.path }}"/>
                 </a>
                 {% endif %}
             {% endfor %}

@@ -10,8 +10,8 @@ description: A collection of random photography shots
         <div id="gallery">
             {% for file in site.static_files %}
                 {% if file.path contains '/assets/images/random-shots/' %}
-                <a href="/photography-site{{ site.baseurl }}{{ file.path }}">
-                    <img alt="{{ file.path | remove: '/assets/images/random-shots/' | remove: '.jpg' }}" src="/photography-site{{ site.baseurl }}{{ file.path }}"/>
+                <a href="{{ site.baseurl }}{{ file.path }}">
+                    <img alt="{{ file.path | remove: '/assets/images/random-shots/' | remove: '.jpg' }}" src="{{ site.baseurl }}{{ file.path }}"/>
                 </a>
                 {% endif %}
             {% endfor %}

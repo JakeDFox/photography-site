@@ -10,8 +10,8 @@ description: Photography showcasing Canada's beauty
         <div id="gallery">
             {% for file in site.static_files %}
                 {% if file.path contains '/assets/images/canada/' %}
-                <a href="/photography-site{{ site.baseurl }}{{ file.path }}">
-                    <img alt="{{ file.path | remove: '/assets/images/canada/' | remove: '.jpg' }}" src="/photography-site{{ site.baseurl }}{{ file.path }}"/>
+                <a href="{{ site.baseurl }}{{ file.path }}">
+                    <img alt="{{ file.path | remove: '/assets/images/canada/' | remove: '.jpg' }}" src="{{ site.baseurl }}{{ file.path }}"/>
                 </a>
                 {% endif %}
             {% endfor %}

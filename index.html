@@ -9,7 +9,7 @@ description: Bonnie Fox Photography
     <div class="hero-slider slick-slider">
         <div class="slick-slide">
             <div class="hero-slide-content">
-                <img src="/photography-site/assets/images/Pine Palette.jpg" alt="Pine Palette" class="hero-image" loading="eager">
+                <img src="/assets/images/Pine Palette.jpg" alt="Pine Palette" class="hero-image" loading="eager">
                 <div class="hero-overlay">
                     <div class="hero-text">
                         <h1 class="poppins-white-italic">Join me on my journeys</h1>
@@ -19,7 +19,7 @@ description: Bonnie Fox Photography
         </div>
         <div class="slick-slide">
             <div class="hero-slide-content">
-                <img src="/photography-site/assets/images/Shades of Grey.jpg" alt="Shades of Grey" class="hero-image" loading="eager">
+                <img src="/assets/images/Shades of Grey.jpg" alt="Shades of Grey" class="hero-image" loading="eager">
                 <div class="hero-overlay">
                     <div class="hero-text">
                         <h1>Wall Art</h1>
@@ -29,7 +29,7 @@ description: Bonnie Fox Photography
         </div>
         <div class="slick-slide">
             <div class="hero-slide-content">
-                <img src="/photography-site/assets/images/Shapes and Shadows.jpg" alt="Shapes and Shadows" class="hero-image" loading="eager">
+                <img src="/assets/images/Shapes and Shadows.jpg" alt="Shapes and Shadows" class="hero-image" loading="eager">
                 <div class="hero-overlay">
                     <div class="hero-text">
                         <h1>Custom Orders</h1>
@@ -39,7 +39,7 @@ description: Bonnie Fox Photography
         </div>
         <div class="slick-slide">
             <div class="hero-slide-content">
-                <img src="/photography-site/assets/images/Tree Magic.jpg" alt="Tree Magic" class="hero-image" loading="eager">
+                <img src="/assets/images/Tree Magic.jpg" alt="Tree Magic" class="hero-image" loading="eager">
                 <div class="hero-overlay">
                     <div class="hero-text">
                         <h1>Prints</h1>
@@ -52,12 +52,12 @@ description: Bonnie Fox Photography
 <section>
         <div class="container container-med">
             <div class="row align-items-center">
-                <h2 class="text-center mt-5 mb-1"><img src="/photography-site/assets/images/logo.png" class="logo-inline">Join me on my journeys</h2>
+                <h2 class="text-center mt-5 mb-1"><img src="/assets/images/logo.png" class="logo-inline">Join me on my journeys</h2>
                 <div class="lg-16 my-4 py-5 text-center">
-                    <img src="/photography-site/assets/images/home-6.jpg" alt="About Bonnie Fox Photography" class="img-fluid rounded" loading="lazy">
+                    <img src="/assets/images/home-6.jpg" alt="About Bonnie Fox Photography" class="img-fluid rounded" loading="lazy">
                 </div>
                 <div class="lg-16 my-4 py-5 text-center">
-                    <img src="/photography-site/assets/images/home-7.jpg" alt="About Bonnie Fox Photography" class="img-fluid rounded" loading="lazy">
+                    <img src="/assets/images/home-7.jpg" alt="About Bonnie Fox Photography" class="img-fluid rounded" loading="lazy">
                 </div>
                 <div class="lg-16 my-4 text-center">
                     <p class="fs-2">All walls need art!
@@ -65,7 +65,7 @@ description: Bonnie Fox Photography
                         </p>
                 </div>
                 <div class="lg-16 my-4 py-5 text-center">
-                    <img src="/photography-site/assets/images/home-9.jpg" alt="About Bonnie Fox Photography" class="img-fluid rounded" loading="lazy">
+                    <img src="/assets/images/home-9.jpg" alt="About Bonnie Fox Photography" class="img-fluid rounded" loading="lazy">
                 </div>
             </div>
         </div>
@@ -74,7 +74,7 @@ description: Bonnie Fox Photography
                 <p class="fs-2 my-2 pb-2">View The Gallery</p>
                 <p class="pb-5">Every photograph tells a story. These images reflect real moments, genuine emotion, and the simple beauty found in everyday life.</p>
             </div>
-            <a href="{{ '/photography-site/gallery' | relative_url }}">
+            <a href="{{ '/gallery' | relative_url }}">
                 <div class="image-mosaic">
                     {% assign mosaicFile = 0 %}
                     {% for file in site.static_files %}
@@ -93,7 +93,7 @@ description: Bonnie Fox Photography
                             {% endif %}
                             <div
                             class="card {{ cardSize }}" data-card-number="{{ mosaicFile }}"
-                            style="background-image: url('/photography-site{{ site.baseurl }}{{ file.path }}')"
+                            style="background-image: url('{{ site.baseurl }}{{ file.path }}')"
                             ></div>
                             {% endunless %}
                         {% endif %}
@@ -104,12 +104,12 @@ description: Bonnie Fox Photography
         <div class="container container-med">
             <div class="row align-items-center">
                 <div class="col-6">
-                    <img src="/photography-site/assets/images/home-4.jpg" alt="About Bonnie Fox Photography" class="img-fluid rounded" loading="lazy">
+                    <img src="/assets/images/home-4.jpg" alt="About Bonnie Fox Photography" class="img-fluid rounded" loading="lazy">
                 </div>
                 <div class="col-6">
                     <h2>Ready to hang canvas prints</h2>
                     <p class="py-2">Premier art canvas prints, wrapped around a 1 1/2 inch wooden stretcher frame ready to hang in your home or business.</p>
-                    <a href="{{ '/photography-site/contact' | relative_url }}">
+                    <a href="{{ '/contact' | relative_url }}">
                         <button type="button" class="btn btn-secondary">Shop Now</button>
                     </a>
                 </div>
@@ -120,7 +120,7 @@ description: Bonnie Fox Photography
                         Write your own personal greeeting on a blank photo card.
                         </p>
                     </div>
-                    <a href="{{ '/photography-site/contact' | relative_url }}">
+                    <a href="{{ '/contact' | relative_url }}">
                         <div class="image-mosaic">
                             {% assign mosaicFile = 0 %}
                             {% for file in site.static_files %}
@@ -129,7 +129,7 @@ description: Bonnie Fox Photography
                                     {% assign cardSize = 'card-tall card-wide' %}
                                     <div
                                     class="card {{ cardSize }}" data-card-number="{{ mosaicFile }}"
-                                    style="background-image: url('/photography-site{{ site.baseurl }}{{ file.path }}')"
+                                    style="background-image: url('{{ site.baseurl }}{{ file.path }}')"
                                     ></div>
                                 {% endif %}
                             {% endfor %}
